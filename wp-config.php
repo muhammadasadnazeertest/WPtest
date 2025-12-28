@@ -31,7 +31,7 @@ define( 'MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL );
 define( 'MYSQL_SSL_CA', '/etc/secrets/ca.pem' ); 
 
 define( 'DB_CHARSET', 'utf8mb4' );
-define( 'DB_COLLATE', '' );
+define( 'DB_COLLATE', 'utf8mb4_unicode_ci' );
 
 /**#@+
  * Authentication unique keys and salts.
