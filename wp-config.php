@@ -21,13 +21,12 @@ set_time_limit(300);
 define( 'MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL );
 define( 'MYSQL_SSL_CA', __DIR__ . '/isrgrootx1.pem' );
 
-define( 'DB_HOST', getenv('DB_HOST') ?: 'localhost' );
-define( 'DB_NAME', getenv('DB_NAME') );
-define( 'DB_USER', getenv('DB_USER') );
-define( 'DB_PASSWORD', getenv('DB_PASSWORD') );
-
+define( 'DB_NAME', getenv('DATABASE_NAME') );
+define( 'DB_USER', getenv('DATABASE_USERNAME') );
+define( 'DB_PASSWORD', getenv('DATABASE_PASSWORD') );
+define( 'DB_HOST', getenv('DATABASE_HOST') . ':4000' ); 
 define( 'DB_CHARSET', 'utf8mb4' );
-define( 'DB_COLLATE', 'utf8mb4_general_ci' );
+define( 'DB_COLLATE', 'utf8mb4_unicode_ci' );
 
 /**#@+
  * Authentication unique keys and salts.
