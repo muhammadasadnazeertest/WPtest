@@ -19,7 +19,7 @@ set_time_limit(300);
  * @package WordPress
  */
 define( 'MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL );
-define( 'MYSQL_SSL_CA', '/isrgrootx1.pem' );
+define( 'MYSQL_SSL_CA', __DIR__ . '/isrgrootx1.pem' );
 
 define( 'DB_HOST', getenv('DB_HOST') ?: 'localhost' );
 define( 'DB_NAME', getenv('DB_NAME') );
