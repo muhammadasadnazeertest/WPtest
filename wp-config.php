@@ -18,21 +18,16 @@ set_time_limit(300);
  *
  * @package WordPress
  */
+define( 'MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL );
+define( 'MYSQL_SSL_CA', '/isrgrootx1.pem' );
 
-// ** Database settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
 define( 'DB_HOST', getenv('DB_HOST') ?: 'localhost' );
 define( 'DB_NAME', getenv('DB_NAME') );
 define( 'DB_USER', getenv('DB_USER') );
 define( 'DB_PASSWORD', getenv('DB_PASSWORD') );
 
-// 2. SSL Flags (Required for Aiven/TiDB)
-define( 'MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL );
-// Render puts "Secret Files" in /etc/secrets/
-define( 'MYSQL_SSL_CA', '/etc/secrets/ca.pem' ); 
-
 define( 'DB_CHARSET', 'utf8mb4' );
-define( 'DB_COLLATE', 'utf8mb4_unicode_ci' );
+define( 'DB_COLLATE', 'utf8mb4_general_ci' );
 
 /**#@+
  * Authentication unique keys and salts.
@@ -82,7 +77,10 @@ $table_prefix = 'wp_';
  *
  * @link https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/
  */
-define( 'WP_DEBUG', false );
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_LOG', true );
+define( 'WP_DEBUG_DISPLAY', true );
+@ini_set( 'display_errors', 1 );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
