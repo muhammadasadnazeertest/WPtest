@@ -1,0 +1,14 @@
+# Ignore the actual config file if you have local passwords
+wp-config.php
+
+# Ignore temporary and log files
+*.log
+.htaccess
+
+# Ignore user uploads (we will use Cloudinary for this)
+wp-content/uploads/
+
+# Optional: Ignore core files if you only want to track themes/plugins
+# wp-admin/
+# wp-includes/
+# *.php
