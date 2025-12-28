@@ -20,10 +20,10 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_HOST', getenv('DB_HOST') ?: 'localhost' );
-define( 'DB_NAME', getenv('DB_NAME') );
-define( 'DB_USER', getenv('DB_USER') );
-define( 'DB_PASSWORD', getenv('DB_PASSWORD') );
+define( 'DB_HOST', 'localhost' );
+define( 'DB_NAME', 'DB_Name');
+define( 'DB_USER', 'DB_USER');
+define( 'DB_PASSWORD', 'DB_PASSWORD');
 
 // 2. SSL Flags (Required for Aiven/TiDB)
 define( 'MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL );
